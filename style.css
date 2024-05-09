@@ -1,0 +1,26 @@
+/* Estilos personalizados */
+body {
+    background-color: #FFA422;
+  }
+  
+  .container {
+    margin-top: 50px;
+    border-color: black;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+  }
+  
+  .invalid-feedback {
+    display: none;
+    color: red;
+  }
+  
+  form.needs-validation input:invalid {
+    border-color: #dc3545;
+  }
+  
+  form.needs-validation input:invalid ~ .invalid-feedback {
+    display: block;
+  }
