@@ -1,26 +1,42 @@
 /* Estilos personalizados */
 body {
-    background-color: #FFA422;
-  }
-  
-  .container {
-    margin-top: 50px;
-    border-color: black;
-  }
-  
-  .form-group label {
+    margin: 0;
+    padding: 0;
+    background-image: url('resource/comida-peruana.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+     /* Color de fondo semi-transparente */
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    
+}
+
+.form-group label {
     font-weight: bold;
-  }
-  
-  .invalid-feedback {
+    
+}
+
+.invalid-feedback {
     display: none;
     color: red;
-  }
-  
-  form.needs-validation input:invalid {
+}
+
+form.needs-validation input:invalid {
     border-color: #dc3545;
-  }
-  
-  form.needs-validation input:invalid ~ .invalid-feedback {
+}
+
+form.needs-validation input:invalid ~ .invalid-feedback {
     display: block;
-  }
+}

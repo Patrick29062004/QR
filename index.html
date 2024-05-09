@@ -5,42 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plaza Karnaval</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <h2 class="text-center mb-4">Formulario de Reservación</h2>
-      <form id="formulario" class="needs-validation" novalidate>
-        <div class="form-group">
-          <label for="nombre">Nombre:</label>
-          <input type="text" class="form-control" id="nombre" name="nombre" required>
-          <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+<div class="wrapper">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="text-center mb-4">
+                            <img src="resource/logo-removebg-preview.png"  width="200px" height="200px" alt="Plaza Karnaval">
+                        </h2>
+                        <form id="formulario" class="needs-validation" novalidate>
+                            <div class="form-group">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                                <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="correo">Correo electrónico:</label>
+                                <input type="email" class="form-control" id="correo" name="correo" required>
+                                <div class="invalid-feedback">Por favor ingresa un correo electrónico válido.</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="fecha">Fecha de nacimiento:</label>
+                                <input type="date" class="form-control" id="fecha" name="fecha" required>
+                                <div class="invalid-feedback">Por favor ingresa tu fecha de nacimiento.</div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col">
+                                    <button type="button" class="btn btn-warning btn-block" id="omitir-btn">Omitir</button>
+                                </div>
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary btn-block" id="enviar-btn">Enviar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="form-group">
-          <label for="correo">Correo electrónico:</label>
-          <input type="email" class="form-control" id="correo" name="correo" required>
-          <div class="invalid-feedback">Por favor ingresa un correo electrónico válido.</div>
-        </div>
-        <div class="form-group">
-          <label for="fecha">Fecha de nacimiento:</label>
-          <input type="date" class="form-control" id="fecha" name="fecha" required>
-          <div class="invalid-feedback">Por favor ingresa tu fecha de nacimiento.</div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <button type="button" class="btn btn-warning btn-block" id="omitir-btn">Omitir</button>
-          </div>
-          <div class="col">
-            <button type="submit" class="btn btn-primary btn-block" id="enviar-btn">Enviar</button>
-          </div>
-        </div>
-      </form>
     </div>
-  </div>
 </div>
 
 <!-- Scripts de Bootstrap -->
@@ -49,33 +56,31 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <!-- Validaciones del formulario -->
 <script>
-  (function() {
-    'use strict';
-    window.addEventListener('load', function() {
-      var forms = document.getElementsByClassName('needs-validation');
-      var validation = Array.prototype.filter.call(forms, function(form) {
-        form.addEventListener('submit', function(event) {
-          if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add('was-validated');
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
         }, false);
-      });
-    }, false);
 
-    // Manejar clic en el botón "Omitir"
-    document.getElementById('omitir-btn').addEventListener('click', function() {
-      window.location.href = 'marcas.html';
-    });
+        // Manejar clic en el botón "Omitir"
+        document.getElementById('omitir-btn').addEventListener('click', function() {
+            window.location.href = 'marcas.html';
+        });
 
-    document.getElementById('enviar-btn').addEventListener('click',function(){
-        window.location.href='marcas.html';
-    });
-  })();
+        document.getElementById('enviar-btn').addEventListener('click',function(){
+            window.location.href='marcas.html';
+        });
+    })();
 </script>
 
 </body>
 </html>
-
-//fadfdafa

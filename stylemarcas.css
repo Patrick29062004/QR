@@ -1,11 +1,17 @@
 body {
-    padding-top: 50px; /* Agrega espacio en la parte superior */
-    padding-bottom: 50px; /* Agrega espacio en la parte inferior */
-  }
-  .list-group-item {
-    font-size: 20px; /* Aumenta el tamaño del texto */
-    margin-bottom: 20px; /* Agrega espacio entre cada botón */
-  }
-  
- 
+    margin: 0;
+    padding: 0;
+    background-image: url('resource/comida-peruana.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+     /* Color de fondo semi-transparente */
+}
     
